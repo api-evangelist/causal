@@ -1,0 +1,19 @@
+generated: '2026-07-18'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.causal.app
+  https: true
+  tls_version: TLSv1.2
+  cert_expires: Mar  7 23:59:59 2027 GMT
+  hsts: false
+domains:
+- domain: causal.app
+  dnssec: false
+  caa:
+  - 0 issue "amazon.com"
+  - 0 issue "pki.goog"
+  - 0 issue "letsencrypt.org"
+  spf: true
+  dmarc: true
+  dmarc_policy: none
